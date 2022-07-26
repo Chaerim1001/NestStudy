@@ -16,7 +16,7 @@ export class BoardsService {
     const found = this.boards.find((board) => board.id === id);
 
     if (!found) {
-      throw new NotFoundException();
+      throw new NotFoundException(`Board with ID ${id} not found`);
     }
 
     return found;
